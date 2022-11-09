@@ -1,6 +1,17 @@
 ---
 language: apt
 default_versions: []
+modules:
+  - name: postgre-web
+    type: html5
+    path: web
+    build-parameters:
+      build-result: build
+      builder: custom
+      commands:
+        - npm install
+        - npm run build
+      supported-platforms: []
 dependency_deprecation_dates: []
 dependencies: []
 pre_package: scripts/build.sh
